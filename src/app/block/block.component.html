@@ -1,4 +1,21 @@
-<div class="top-left">A B C</div>
-<div class="top-right">A B C</div>
-<div class="bottom-left">A B C</div>
-<div class="bottom-right">A B C</div>
+<div class="container">
+  <div class="top-left">A B C</div>
+  <div class="top-right">A B C</div>
+  <div class="bottom-left">A B C</div>
+  <div class="bottom-right">A B C</div>
+
+  <div class="box">
+    <p>
+      <img [src]="imageSrc" [alt]="name" />
+      Hello {{ name }} !
+    </p>
+  </div>
+
+  <div>
+    <button (click)="sayHello()">Dire Bonjour</button>
+  </div>
+
+  <div>
+    <input type="text" [(ngModel)]="name" />
+  </div>
+</div>
