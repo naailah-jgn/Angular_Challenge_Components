@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <ul>
+        <li>Pommes de terre</li>
+        <li
+          [ngStyle]="{
+            backgroundColor: isThisIngredientVital ? 'red' : 'yellow'
+          }"
+        >
+          <!--  si isThisIngredientVital a la valeur true, alors la valeur de backgroundColor 
+      sera 'red' ; si non, elle sera 'yellow' -->
+          Raclette
+        </li>
+        <li>Ham</li>
+        <li [ngClass]="{ vital: isThisIngredientVital }">Pickles</li>
+        <li>Pain</li>
+      </ul>
+
+      <ul>
+        <li *ngIf="isGuestListDisplayed">Brenda</li>
+        <li>Dylan</li>
+        <li>Michel Drucker</li>
+        <li>Marc Aurèle</li>
+        <li>Julie</li>
+      </ul>
+
+      <ul>
+        <li *ngFor="let song of songList">
+          {{ song }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
